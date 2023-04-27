@@ -92,7 +92,7 @@ main .card-group .luxury .learn-more-btn:hover {
     flex-direction: row;
   }
   main .card-group .card .description {
-    max-width: 200px;
+    max-width: 210px;
   }
   main .card-group .card .learn-more-btn {
     margin: 70px 0 0;
