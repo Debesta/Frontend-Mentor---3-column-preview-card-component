@@ -8,12 +8,97 @@
 	padding: 0;
 }
 
-html{
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 15px;
+html {
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 15px;
+	color: c.$transparent-white;
 }
 
-main{
-    height: 100vh;
-    width: 100vw;
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+	padding: 50px 30px;
+	background-color: c.$very-light-gray;
+	.card-group {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px;
+		overflow: hidden;
+		.card {
+			position: relative;
+			max-height: 460px;
+            max-width: 315px;
+			padding: 40px;
+			.title {
+				padding: 25px 0;
+				text-transform: uppercase;
+				font-family: 'Big Shoulders Display', sans-serif;
+			}
+			.description {
+				line-height: 1.7;
+			}
+			.learn-more-btn {
+				width: 70%;
+                padding: 15px;
+				margin: 25px 0 0;
+				border: 2px solid c.$transparent-white;
+				border-radius: 25px;
+				font-family: 'Lexend Deca', sans-serif;
+				background-color: c.$transparent-white;
+				transition: 0.3s;
+				cursor: pointer;
+			}
+			.learn-more-btn:hover {
+				color: c.$transparent-white;
+			}
+		}
+		.sedans {
+			background-color: c.$bright-orange;
+			.learn-more-btn {
+				color: c.$bright-orange;
+			}
+			.learn-more-btn:hover {
+				background-color: c.$bright-orange;
+			}
+		}
+		.suvs {
+			background-color: c.$dark-cyan;
+			.learn-more-btn {
+				color: c.$dark-cyan;
+			}
+			.learn-more-btn:hover {
+				background-color: c.$dark-cyan;
+			}
+		}
+		.luxury {
+			background-color: c.$very-dark-cyan;
+			.learn-more-btn {
+				color: c.$very-dark-cyan;
+			}
+			.learn-more-btn:hover {
+				background-color: c.$very-dark-cyan;
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+    main{
+        height: 100vh;
+        .card-group{
+            flex-direction: row;
+            .card{
+                .description{
+                    max-width: 200px;
+                }
+                .learn-more-btn{
+                    margin: 70px 0 0;
+                }
+            }
+        }
+    }
 }
